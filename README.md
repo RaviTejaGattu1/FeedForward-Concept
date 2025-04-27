@@ -33,6 +33,7 @@ python app.py
 http://localhost:5000
 
 ## 🗂 Project Structure
+ ```csharp
 FeedForward/
 ├── app.py               # Main Flask application
 ├── templates/           # HTML templates
