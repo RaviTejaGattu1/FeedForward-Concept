@@ -33,14 +33,19 @@ python app.py
 http://localhost:5000
 
 ## 🗂 Project Structure
- ```csharp
-FeedForward/
-├── app.py               # Main Flask application
-├── templates/           # HTML templates
-├── static/              # Static files (images, CSS)
-├── .gitignore           # Git ignored files
-├── README.md            # This README
+  ```
+  FeedForward/
+  ├── app.py               # Main Flask application
+  ├── templates/           # HTML templates
+  ├── static/              # Static files (images, CSS)
+  ├── .gitignore           # Git ignored files
+  ├── README.md            # This README
+  ```
+
 
 ## 📝 Notes
 📸 Images in static/ are optional — the site works fine without them.
 🔒 No backend logic implemented — for demonstration purposes only.
+
+
+
