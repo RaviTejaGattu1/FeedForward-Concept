@@ -26,7 +26,6 @@ Built using **Python (Flask)** for a class project, focusing on **navigation and
    pip install flask
 
 2. **Run the app**:
-
 python app.py
 
 3. **Open your browser and go to** :
@@ -41,7 +40,6 @@ http://localhost:5000
   ├── .gitignore           # Git ignored files
   ├── README.md            # This README
   ```
-
 
 ## 📝 Notes
 📸 Images in static/ are optional — the site works fine without them.
