@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h2 class="text-2xl font-bold text-pink-500 mb-4">Search Results</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {% for listing in listings %}
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-xl font-semibold text-pink-500">{{ listing.name }}</h3>
+            <div class="my-2">
+                {% if listing.images %}
+                <img src="/static/{{ listing.images[0] }}" class="w-32 h-32 object-cover inline-block mx-1" alt="{{ listing.name }}">
+                {% else %}
+                <div class="w-32 h-32 bg-gray-700 inline-block mx-1 flex items-center justify-center text-gray-400">No Image</div>
+                {% endif %}
+            </div>
+            <p><strong>Address:</strong> {{ listing.address }}</p>
+            <p><strong>Distance:</strong> {{ listing.distance }}</p>
+            <p><strong>Freshness:</strong> {{ listing.freshness }}</p>
+            <a href="/reserved" class="btn mt-2">Reserve</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

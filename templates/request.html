@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg">
+    <h2 class="text-2xl font-bold text-pink-500 mb-4">Request Food</h2>
+    <div>
+        <div class="mb-4">
+            <label class="block text-gray-300">My Location</label>
+            <input type="text" class="w-full p-2 bg-gray-900 rounded" placeholder="e.g., 456 Oak Ave">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300">Find Within Range (km)</label>
+            <input type="number" class="w-full p-2 bg-gray-900 rounded" placeholder="e.g., 10">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300">Food Preferences</label>
+            <input type="text" class="w-full p-2 bg-gray-900 rounded" placeholder="e.g., Vegetarian">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300">Foods Similar To</label>
+            <input type="text" class="w-full p-2 bg-gray-900 rounded" placeholder="e.g., Bread, Soup">
+        </div>
+        <a href="/search_results" class="btn w-full text-center">Search</a>
+    </div>
+</div>
+{% endblock %}

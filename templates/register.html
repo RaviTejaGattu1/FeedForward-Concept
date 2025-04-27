@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg">
+    <h2 class="text-2xl font-bold text-pink-500 mb-4">Register</h2>
+    <div>
+        <div class="mb-4">
+            <label class="block text-gray-300">Name</label>
+            <input type="text" class="w-full p-2 bg-gray-900 rounded" placeholder="Enter name">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300">ID</label>
+            <input type="text" class="w-full p-2 bg-gray-900 rounded" placeholder="Enter ID">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300">Password</label>
+            <input type="password" class="w-full p-2 bg-gray-900 rounded" placeholder="Enter password">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300">Role</label>
+            <select class="w-full p-2 bg-gray-900 rounded" onchange="toggleCodeInput(this)">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+        <div id="adminCode" class="mb-4 hidden">
+            <label class="block text-gray-300">Admin Code</label>
+            <input type="text" class="w-full p-2 bg-gray-900 rounded" placeholder="Enter admin code">
+        </div>
+        <a href="/login_user" class="btn w-full text-center">Confirm</a>
+    </div>
+</div>
+<script>
+function toggleCodeInput(select) {
+    document.getElementById('adminCode').classList.toggle('hidden', select.value !== 'admin');
+}
+</script>
+{% endblock %}

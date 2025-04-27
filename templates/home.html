@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="text-center">
+    <h1 class="text-4xl font-bold text-pink-500 mb-4">Hi, Welcome to FeedForward</h1>
+    <p class="text-lg mb-6">Connecting surplus food providers to the needy to eliminate world hunger.</p>
+    <div class="grid grid-cols-3 gap-4 mb-8">
+        <div>
+            <p class="text-2xl font-semibold">{{ stats.food_delivered }}</p>
+            <p>Food Delivered</p>
+        </div>
+        <div>
+            <p class="text-2xl font-semibold">{{ stats.kcal_met }}</p>
+            <p>Kcal of Hunger Met</p>
+        </div>
+        <div>
+            <p class="text-2xl font-semibold">{{ stats.lives_impacted }}</p>
+            <p>Lives Impacted</p>
+        </div>
+    </div>
+    <div class="space-x-4">
+        <a href="/register" class="btn">Register</a>
+        <a href="/login_user" class="btn">Login as User</a>
+        <a href="/login_admin" class="btn">Login as Admin</a>
+    </div>
+</div>
+{% endblock %}
